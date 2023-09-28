@@ -72,7 +72,7 @@ class ManterDiciplina(models.Model):
 class ManterMatriculas(models.Model):
     instituicao_matricula = models.ForeignKey(ManterEnsino, on_delete=models.CASCADE)
     curso_matricula = models.ForeignKey(ManterCursos, on_delete=models.CASCADE)
-    c = models.ForeignKey(ManterPessoas, on_delete=models.CASCADE) 
+    pessoa_matricula = models.ForeignKey(ManterPessoas, on_delete=models.CASCADE) 
     data_inicio_matricula = models.CharField(max_length=20)
     data_previsao_termino_matricula = models.CharField(max_length=20)
     def __str__(self):
